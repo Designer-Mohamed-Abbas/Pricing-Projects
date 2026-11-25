@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+Project: Mohamed Abbas Pricing
+Developed by: Mohamed Ahmed Abbas
+Role: Front-End Development
+Copyright (c) 2026 Mohamed Ahmed Abbas. All rights reserved.
+-->
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>محمد عباس | قائمة الخدمات والأسعار</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+<header class="hero">
+  <i class="blob b1"></i><i class="blob b2"></i>
+  <div class="wrap">
+    <div class="botw">
+    <div id="say" aria-live="polite"></div>
+    <button id="bot" type="button" aria-label="روبوت تفاعلي: اضغط عليه ليتفكك ويتجمع">
+      <svg viewBox="0 0 200 250" aria-hidden="true">
+        <g class="p" id="pa"><rect x="97" y="14" width="6" height="26" rx="3" fill="#9aa6c7"/><circle cx="100" cy="11" r="9" fill="#ffc83d"/></g>
+        <g class="p" id="ph">
+          <rect x="34" y="68" width="12" height="30" rx="6" fill="#2f5bff"/><rect x="154" y="68" width="12" height="30" rx="6" fill="#2f5bff"/>
+          <rect x="45" y="38" width="110" height="82" rx="26" fill="#f1f3f8"/>
+          <rect x="58" y="52" width="84" height="54" rx="18" fill="#0e1b3d"/>
+          <circle class="eye" cx="82" cy="76" r="12" fill="#fff"/><circle class="eye" cx="118" cy="76" r="12" fill="#fff"/>
+          <g class="look"><circle cx="82" cy="76" r="6" fill="#2f5bff"/><circle cx="118" cy="76" r="6" fill="#2f5bff"/></g>
+          <path d="M88 95q12 8 24 0" fill="none" stroke="#ffc83d" stroke-width="4" stroke-linecap="round"/>
+        </g>
+        <g class="p" id="pb"><rect x="58" y="126" width="84" height="78" rx="20" fill="#2f5bff"/><rect x="76" y="142" width="48" height="12" rx="6" fill="#0e1b3d" opacity=".35"/><circle cx="100" cy="176" r="10" fill="#ffc83d"/></g>
+        <g class="p" id="pl"><rect x="30" y="130" width="20" height="62" rx="10" fill="#f1f3f8"/></g>
+        <g class="p" id="pr"><rect x="150" y="130" width="20" height="62" rx="10" fill="#f1f3f8"/></g>
+        <g class="p" id="pg"><rect x="70" y="208" width="20" height="38" rx="10" fill="#f1f3f8"/><rect x="110" y="208" width="20" height="38" rx="10" fill="#f1f3f8"/></g>
+      </svg>
+    </button>
+  </div>
+  <p class="name">محمد عباس · Graphic Designer · Front-End Developer · AI Solutions</p>
+    <h1 id="h1">تصميم وموقع وذكاء اصطناعي، بأسعار واضحة من أول يوم</h1>
+    <p>اختار الباقات اللي تناسبك وضيفها لعرضك، وانسخ الملخص وابعته. السعر النهائي بيتحدد بعد فهم متطلبات شغلك.</p>
+    <div class="btns">
+      <a class="btn main" href="https://www.behance.net/47f0ac3b" target="_blank" rel="noopener">شوف الأعمال على Behance</a>
+      <a class="btn" href="https://wa.me/201080892215" target="_blank" rel="noopener">واتساب</a>
+      <a class="btn" href="https://www.linkedin.com/in/mohamed-ahmed-Abbas" target="_blank" rel="noopener">تواصل على LinkedIn</a>
+    </div>
+    <div class="stats">
+      <div><b data-n="5">0</b><small>مجالات خدمة</small></div>
+      <div><b id="sv" data-n="0">0</b><small>خدمة بسعر معلن</small></div>
+      <div><b id="pk" data-n="0">0</b><small>باقة جاهزة</small></div>
+      <div><b data-n="20">0</b><small>% مقدم فقط</small></div>
+    </div>
+  </div>
+</header>
+<div class="marquee" aria-hidden="true"><div id="mq"></div></div>
+<nav class="tabs" aria-label="أقسام الخدمات"><div class="wrap" role="tablist" id="tabs"></div></nav>
+<main class="wrap" id="main"></main>
+<div id="bar" role="status"><span id="bt"></span><button id="open">شوف عرضي</button></div>
+<dialog id="dlg" aria-labelledby="dh">
+  <h3 id="dh" style="margin:0">عرضك المبدئي</h3>
+  <ul id="dl"></ul>
+  <p id="dt" style="font-weight:700;margin:0"></p>
+  <p class="sub" style="margin:6px 0 0;font-size:14px">السعر النهائي بعد تحديد المتطلبات، وبيبدأ التنفيذ بعد مقدم 20%.</p>
+  <input class="search" id="cn" placeholder="اسمك (اختياري)" aria-label="اسمك" style="margin:14px 0 8px">
+  <textarea class="search" id="cm" rows="2" placeholder="ملاحظات أو تفاصيل عن مشروعك (اختياري)" aria-label="ملاحظات"></textarea>
+  <div class="dlg-act">
+    <a class="go wa" id="wa" href="#" target="_blank" rel="noopener">اطلب عبر واتساب</a>
+    <button class="go" id="copy">انسخ الملخص</button>
+    <a class="btn" style="color:var(--ink);border-color:var(--acc)" href="https://www.linkedin.com/in/mohamed-ahmed-Abbas" target="_blank" rel="noopener">ابعته على LinkedIn</a>
+    <button class="x" id="close">إغلاق</button>
+  </div>
+</dialog>
+<footer>
+  <div class="wrap">
+    <div><strong>محمد عباس</strong><p>Senior Graphic Designer | Front-End Developer | AI Solutions Developer</p></div>
+    <div class="btns">
+      <a class="btn main" href="https://www.behance.net/47f0ac3b" target="_blank" rel="noopener">Behance</a>
+      <a class="btn" href="https://www.linkedin.com/in/mohamed-ahmed-Abbas" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
